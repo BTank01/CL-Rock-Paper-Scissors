@@ -20,7 +20,20 @@ namespace RockPaperScissors
 
             Random randObj = new Random(); //Creates a new random object to use          
             int compSelection = randObj.Next(1,4); //Uses the random object to generate a random number between 1 and 4 -so 1, 2, 3
-            Console.WriteLine(compSelection);
+
+            //This selects which option the computer picks so it can be outputed
+            string compSelectionChoice = "";
+            if (compSelection == 1){
+                compSelectionChoice = "Rock";
+            }
+            else if (compSelection == 2){
+                compSelectionChoice = "Paper";
+            }
+            else if (compSelection == 3){
+                compSelectionChoice = "Scissors";
+            }
+
+            Console.WriteLine("The computer chose {0} \nTherefore:", compSelectionChoice); //Replaces {0} with the 0th variable at the end which is compSelectionChoice
 
             switch (userSelection) //Switch Case Statement
 	        {
